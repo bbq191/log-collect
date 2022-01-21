@@ -24,4 +24,15 @@ public class IndexController {
     log.error("我是一条error日志");
     return "idx";
   }
+
+  @RequestMapping(value = "/err")
+  public String err() {
+    InputMDC.putMDC();
+    try {
+      int a = 1 / 0;
+    } catch (Exception e) {
+      log.error("算术异常", e);
+    }
+    return "err";
+  }
 }
