@@ -1,0 +1,5 @@
+- [x] kafka
+- [x] elastic-search
+- [x] filebeats
+- [x] logstash
+- [x] 监控警告
